@@ -12,3 +12,22 @@ function sum67(nums){
   }
   return sum;
 }
+
+// respuesta 2
+
+function sum67(nums){
+  let stop = false;
+  let sum = 0;
+  for(let i of nums){
+    if(i === 6){
+      stop = true;
+    }
+    if(!stop){
+      sum += i;
+    }
+    if(stop && i === 7){
+      stop = false;
+    }
+  }
+  return sum;
+}
